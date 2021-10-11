@@ -26,6 +26,6 @@ data class Post(
     val description: String){
 
     override fun toString(): String {
-        return "My first post"
+        return "My $id post"
     }
 }
