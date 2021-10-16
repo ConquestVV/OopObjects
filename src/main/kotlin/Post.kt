@@ -1,3 +1,4 @@
+import WallService.posts
 import java.util.*
 
 data class Post(
@@ -26,6 +27,6 @@ data class Post(
     val description: String){
 
     override fun toString(): String {
-        return "My $id post"
+        return "My $id post, ownerId = $ownerId"
     }
 }
