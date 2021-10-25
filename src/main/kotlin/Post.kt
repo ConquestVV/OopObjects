@@ -1,4 +1,4 @@
-import WallService.posts
+//import WallService.posts
 import java.util.*
 
 data class Post(
