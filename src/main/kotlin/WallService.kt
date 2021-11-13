@@ -1,5 +1,5 @@
 object WallService {
-    var array = emptyArray<Post>()
+    private var array = emptyArray<Post>()
 
     fun add(post: Post): Post {
         array += post
@@ -11,6 +11,7 @@ object WallService {
 
     }
 
+    fun get(index: Int) = array.getOrNull(index)
 
     fun update(post: Post): Boolean {
         var haveIndex = false

@@ -6,18 +6,21 @@ class MainKtTest {
 
     @Test
     fun update_isWorkingCorrectly() {
-        val haveIndex = false
-        val index = 1
-        val ownerId = 1
-        val array = emptyArray<Post>()
+        val post = Post(1, 1, 1, 1, 1, "text", 1, 1, true, 1, true, true, true, true, true, true, 1, "description")
 
-        val result = WallService.update(
-            haveIndex = haveIndex,
-            index = index,
-            ownerId = ownerId,
-            array = array
-        )
+        val result = WallService.update(post = post)
 
-        assertEquals(1, result)
+        assertEquals(false, result)
+    }
+
+    @Test
+    fun add_isWorkingCorrectly() {
+        val post = Post(1, 1, 1, 1, 1, "text", 1, 1, true, 1, true, true, true, true, true, true, 1, "description")
+        val expectedNextPost = Post(2, 1, 1, 1, 1, "text", 1, 1, true, 1, true, true, true, true, true, true, 1, "description")
+
+        val result = WallService.add(post = post)
+
+        assertEquals(expectedNextPost, result)
     }
 }
+
