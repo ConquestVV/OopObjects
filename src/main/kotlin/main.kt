@@ -1,9 +1,9 @@
-import kotlin.Unit.toString
+
 
 fun main() {
-
-    val myPost = Post(1,1,1,1,1,"text",1,1,true,1,true,true,true,true,true,true,1,"description")
-    val mySecondPost = Post(2,1,1,1,1,"text",1,1,true,1,true,true,true,true,true,true,1,"description")
+    val attach = Photo("photo",1,1,1,1)
+    val myPost = Post(1,1,1,1,1,null,1,1,true,1,true,true,true,true,true,true,1,"description", attach)
+    val mySecondPost = Post(2,1,1,1,1,"text",1,1,true,1,false,true,true,true,true,true,1,"description", attach)
 
 
     WallService.set(0, myPost)
