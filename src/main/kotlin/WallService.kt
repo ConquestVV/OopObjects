@@ -4,21 +4,6 @@ import Attachments
 object WallService {
     private var array = emptyArray<Post>()
 
-    object Attach{
-       var attach = null
-       val Attachments.type : String
-            get() = "$type"
-
-       fun typeOfAttach(attach: Attachments){
-           if (attach is Attachments.type){
-               TODO()
-           }
-
-           TODO()
-       }
-
-
-    }
 
     fun add(post: Post): Post {
         var postCopy = post.copy(id = post.id + 1)

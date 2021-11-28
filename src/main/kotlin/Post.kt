@@ -6,11 +6,10 @@ data class Post(
     val date: Int,
     val text: String?,
     val replyOwnerId: Int,
-//    val geo: Objects,
     val replyPostId: Int,
     val friendsOnly: Boolean,
     val signedIn: Int,
-    val canPin: Boolean?,
+    val canPin: Boolean,
     val canDelete: Boolean,
     val canEdit: Boolean,
     val isPinned: Boolean,
@@ -18,14 +17,18 @@ data class Post(
     val isFavorite: Boolean,
     val postponedId: Int,
     val description: String,
-    val attachement: Attachments
+    val attachment: Array<Attachments>
 ){
 
+
     override fun toString(): String {
-        return "My $id post, ownerId = $ownerId, message: $message, pin accesses: $canPin, attach: $attachement"
+        return "My $id post, ownerId = $ownerId, message: $message, pin accesses: $canPin, attachment: $attachment"
     }
 
     var message = text ?: "404 not found :("
+
+
+
 
 
 }
