@@ -1,11 +1,11 @@
 fun main() {
-    var arrayOfAttachments = emptyArray<Attachments>()
+    var arrayOfAttachments = emptyList<Attachments>()
 
-    arrayOfAttachments += Photo("photo",2,1,1,1,"null","null",0,"null",1,"null")
-    arrayOfAttachments += Audio("audio",1,"HUMBLE.","Kendrick Lamar",5,0,0,0,"null",1,"null")
-    arrayOfAttachments += Note("note",1,1,"Note",1,1,"null",0,"null",1,"null")
-    arrayOfAttachments += Video("video",1,1,"Happy Cats","meow",1,1,0,"null",1,"null")
-    arrayOfAttachments += Document("document",1,1,"MicrosoftWordDoc",5,"ext",1,1,"null",1,"null")
+    arrayOfAttachments += Photo("photo",1,1)
+    arrayOfAttachments += Audio("audio",1,1)
+    arrayOfAttachments += Note("note",1,1)
+    arrayOfAttachments += Video("video",1,1)
+    arrayOfAttachments += Document("document",1,1)
 
 
     val myPost = Post(1,1,1,1,1,null,1,1,true,1,true,true,true,true,true,true,1,"description", arrayOfAttachments)

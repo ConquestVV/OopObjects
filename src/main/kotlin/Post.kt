@@ -17,7 +17,7 @@ data class Post(
     val isFavorite: Boolean,
     val postponedId: Int,
     val description: String,
-    val attachment: Array<Attachments>
+    val attachment: List<Attachments>
 ){
 
 
