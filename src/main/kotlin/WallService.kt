@@ -1,9 +1,19 @@
-import WallService.array
-import Attachments
-
 object WallService {
     private var array = emptyArray<Post>()
 
+    fun createComment(comment: Comment){
+        val id = comment.postId
+        val comment = findById(id)?.comment ?: throw PostNotFoundException("no post with id $id")
+    }
+
+    fun findById(id: Int): Post? {
+        for (post in array) {
+            if (post.id == id) {
+                return post
+            }
+        }
+        return null
+    }
 
     fun add(post: Post): Post {
         var postCopy = post.copy(id = post.id + 1)
