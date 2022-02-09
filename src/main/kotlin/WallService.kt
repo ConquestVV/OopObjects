@@ -1,9 +1,13 @@
 object WallService {
     private var array = emptyArray<Post>()
+    private var comments = mutableListOf<Comment>()
 
-    fun createComment(comment: Comment){
+    fun createComment(comment: Comment): Comment {
         val id = comment.postId
-        val comment = findById(id)?.comment ?: throw PostNotFoundException("no post with id $id")
+        val exception = findById(id)?.comments ?: throw PostNotFoundException("No post with id $id")
+        comments.add(id,comment)
+
+        return comments.last()
     }
 
     fun findById(id: Int): Post? {

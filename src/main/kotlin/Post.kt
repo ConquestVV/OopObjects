@@ -18,12 +18,12 @@ data class Post(
     val postponedId: Int,
     val description: String,
     val attachment: List<Attachments>,
-    val comment: Comment
+    val comments: MutableList<Comment>
 ){
 
 
     override fun toString(): String {
-        return "My $id post, ownerId = $ownerId, message: $message, pin accesses: $canPin, attachment: $attachment, comment: $comment"
+        return "My $id post, ownerId = $ownerId, message: $message, pin accesses: $canPin, attachment: $attachment, comment: $comments"
     }
 
     var message = text ?: "404 not found :("
