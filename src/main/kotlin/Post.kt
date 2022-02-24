@@ -20,17 +20,25 @@ data class Post(
     val attachment: List<Attachments>,
     val comments: MutableList<Comment>
 ){
-
+    private var array = emptyArray<Post>()
 
     override fun toString(): String {
-        return "My $id post, ownerId = $ownerId, message: $message, pin accesses: $canPin, attachment: $attachment, comment: $comments"
+        val comment = mutableListOf<Comment>(id)
+        return "My $id post, ownerId = $ownerId, message: $message, pin accesses: $canPin, attachment: $attachment, comment: $comment"
     }
 
+    private fun <T> mutableListOf(index: Int): MutableList<Comment>? {
+        comments += comments.get(id)
+        if (index != comments.get(id).postId) {
+            return null
+        }
+        val comment = mutableListOf<Comment>()
+        comment += comments.get(id)
+        return comment
+    }
+
+
     var message = text ?: "404 not found :("
-
-
-
-
 
 }
 

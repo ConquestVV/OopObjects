@@ -66,7 +66,7 @@ class MainKtTest {
         WallService.set(0, post)
         val result = WallService.createComment(myComment)
 
-        assertEquals(comments, result)
+        assertEquals(comments.last(), result)
     }
 }
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="MainKtTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-02-09T10:59:32" hostname="LAPTOP-NH1A3JQV" time="0.361">
+<testsuite name="MainKtTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-02-24T15:57:05" hostname="LAPTOP-NH1A3JQV" time="0.162">
   <properties/>
-  <testcase name="update_whenHaveIndexFalse" classname="MainKtTest" time="0.287"/>
-  <testcase name="shouldThrow" classname="MainKtTest" time="0.003"/>
-  <testcase name="update_whenHaveIndexTrue" classname="MainKtTest" time="0.001"/>
-  <testcase name="add_isWorkingCorrectly" classname="MainKtTest" time="0.001"/>
+  <testcase name="update_whenHaveIndexFalse" classname="MainKtTest" time="0.161"/>
+  <testcase name="shouldThrow" classname="MainKtTest" time="0.0"/>
+  <testcase name="update_whenHaveIndexTrue" classname="MainKtTest" time="0.0"/>
+  <testcase name="add_isWorkingCorrectly" classname="MainKtTest" time="0.0"/>
   <testcase name="createComment_isWorkingCorrectly" classname="MainKtTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

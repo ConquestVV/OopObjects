@@ -2,6 +2,8 @@ fun main() {
     var arrayOfAttachments = emptyList<Attachments>()
     val comments = mutableListOf<Comment>()
 
+
+
     arrayOfAttachments += Photo("photo",1,1)
     arrayOfAttachments += Audio("audio",1,1)
     arrayOfAttachments += Note("note",1,1)
@@ -11,12 +13,8 @@ fun main() {
     val myComment = Comment(1,0,"haha")
     val mySecondComment = Comment(2,1,"omg")
 
-
-
-
     val myPost = Post(0,1,1,1,1,"text",1,1,true,1,false,true,true,true,true,true,1,"description", arrayOfAttachments, comments)
     val mySecondPost = Post(1,1,1,1,1,"text",1,1,true,1,false,true,true,true,true,true,1,"description", arrayOfAttachments, comments)
-
 
 
     WallService.set(0, myPost)
